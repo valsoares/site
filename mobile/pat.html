@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!-- Créditos:
+Estruturação do site: https://www.w3schools.com/
+-->
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<head>
+
+<!-- ícone que fica do lado da aba onde fica o nome do site -->
+<link rel="icon" type="image/x-icon" href="../imagens/logodroid.png" />
+<title>Equipe DROID</title>
+
+</head>
+
+<style type="text/css">
+
+/* fontes */
+@font-face {
+font-family: droidsans;
+font-style: normal;
+font-weight: normal;
+src: url(../fontes/DroidSans.ttf);
+}
+
+@font-face {
+font-family: droidsansbold;
+font-style:normal;
+font-weight:bold;
+src: url(../fontes/DroidSans-Bold.ttf);
+}
+
+/*negrito, italico, sublinhado, riscado e paragrafo*/
+b, strong 	{color: #A20606;}
+i, em 		{color: #333333;}
+u   		{color: #333333; border-bottom: 1px solid #A20606;}
+s, strike 	{color: #333333;}
+p {padding-top: 30px; padding-bottom: 30px}
+
+/* plano de fundo */
+body {
+	  background-color: #fff;
+		color:#000;
+		font-size: 16px;
+		font-family: droidsans;
+		text-align:left;
+		letter-spacing:0px;
+		margin:0;
+	}
+
+/* Rodape */
+
+.rodape {
+	color: #fff;
+	font-size: 6vw;
+	background-color: #000;
+	width: 100%;
+	height: auto;
+	bottom: 0;
+	position:fixed;
+	box-sizing: border-box;
+	display:none;
+}
+
+p.rodape {
+	padding: 1% 10% 1% 10%;
+	line-height: 2;
+	display: block;
+	position: relative;
+}
+
+.rodape.cel {
+	display: block;
+}
+
+/* Textos */
+
+.textos {
+	padding: 5% 5% 15% 5%;
+	font-size: 6vw;
+  text-align: center;
+  line-height: 0;
+}
+
+.textos.cel {
+  display: none;
+}
+
+h1 {margin-bottom: 1.2em;}
+
+h4 {margin-bottom: 0.2em;}
+
+
+/* Menu */
+
+.menu {
+}
+
+.menu.cel {
+	background-image: url('../imagens/1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100vh;
+	padding-top: 20%;
+
+}
+
+.menu a {
+	color: #fff;
+	text-align: left;
+	text-decoration: none;
+	font: droidsansbold;
+	font-size: 7vw;
+	font-weight: bold;
+	letter-spacing:5px;
+	line-height: 2.5;
+	cursor: pointer;
+	padding-left: 10%;
+	display: none;
+}
+
+.menu a.icon{
+	background: #9F1A1A;
+	background-image: url('../imagens/list.png');
+	background-size: 13%;
+	background-position: 10% 50%;
+	background-repeat: no-repeat;
+	display: block;
+	/* position: absolute; */
+}
+
+.menu.cel a.icon{
+	display: none;
+}
+
+.menu.cel a {
+	display: block;
+}
+
+/* Setas */
+
+.prev {
+	width:13%;
+	left: 10%;
+	position: absolute;
+	padding-bottom:10%;
+	transform: translateY(130%);
+	opacity: .5;
+}
+
+.next {
+	width: 13%;
+	left: 80%;
+	position: absolute;
+	padding-bottom:10%;
+	transform: translateY(130%);
+	opacity: .5;
+}
+
+/* Fotos */
+
+.apoio {
+	width:80%;
+	height:auto;
+	margin-bottom:10%;
+}
+
+</style>
+
+<body>
+
+<div id="pag">
+	<div class="menu" id="meumenu">
+			<!-- <img src="imagens/logodroid.png" id="cabecalho" style="width:15%; height:auto; position:fixed; right:5%;"> -->
+			<a href="javascript:void(0);" class="icon" onclick="menu()">
+				<img src="../imagens/logodroid.png" style="width:35%; margin-left: 60%; margin-top:2%">
+			</a>
+			<a href="qs.html" title="Somos a DROID" >QUEM SOMOS</a>
+			<a href="histo.html" title="Passos da equipe" >HISTÓRICO</a>
+			<a href="coo.html" title="Organização interna" >COORDENADORIAS</a>
+			<a href="pat.html" title="Quem nos apoia" >PATROCINADORES</a>
+			<a href="foto.html" title="Momentos da equipe" >GALERIA</a>
+
+			<div class="rodape" id="meurodape">
+				<p class="rodape">
+					Telefone: (61)96332131 </br>
+					ULEG - UNB</br>
+					droid@droidunb.com </br>
+				</p>
+			</div>
+			
+	</div>
+
+  <div class="textos" id="meutexto">
+  <h1><center>Patrocinadores</center></h1>
+
+	<img src="../imagens/dron.png" class="apoio">
+	<img src="../imagens/festo.png" class="apoio">
+	<img src="../imagens/autotrac.png" class="apoio">
+	<img src="../imagens/td.png" class="apoio">
+	<img src="../imagens/ft.png" class="apoio">
+	<img src="../imagens/neato.png" class="apoio">
+	<img src="../imagens/unb.png" class="apoio">
+
+	<a href="coo.html" title="Organização interna">
+		<img class="prev" src="../imagens/left.png">
+	</a>
+	<a href="foto.html" title="Momentos da equipe">
+	 <img class="next" src="../imagens/right.png">
+	</a>
+	</div>
+
+  </div>
+
+</div>
+
+</body>
+
+<script>
+
+function menu() {
+  var x = document.getElementById("meumenu");
+	var y = document.getElementById("meurodape");
+  var z = document.getElementById("meutexto");
+  if (x.className === "menu") {
+    x.className += " cel";
+		y.className += " cel";
+    z.className += " cel";
+  } else {
+    x.className = "menu";
+		y.className = "rodape";
+    z.className = "textos";
+  }
+}
+
+</script>
+
+</html>
