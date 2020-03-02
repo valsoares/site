@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <!-- Créditos:
 Estruturação do site: https://www.w3schools.com/
+Slides: https://kenwheeler.github.io/slick/
 -->
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <head>
 
+<link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
+
 <!-- ícone que fica do lado da aba onde fica o nome do site -->
-<link rel="icon" type="image/x-icon" href="imagens/logodroid.png" />
+<link rel="icon" type="image/x-icon" href="imagens/logodroid.png">
 <title>Equipe DROID</title>
 
 </head>
@@ -54,7 +58,7 @@ body {
 
 #pag {
 	background-color: #fff;
-	background-image: url('imagens/malha2.png'), url('imagens/malha2.png');
+	background-image: url('imagens/malha3.png'), url('imagens/malha3.png');
 	background-repeat: repeat-y, repeat-y;
 	background-position: right, left;
 	background-attachment: fixed, fixed;
@@ -122,7 +126,7 @@ h4 {margin-bottom: 0.2em;}
 	z-index:-2;
 }
 
-/* Configuração menu */
+/* Menu */
 
 .menu {
 	background-color: #fff;
@@ -151,54 +155,53 @@ h4 {margin-bottom: 0.2em;}
 	object-fit: cover;
 }
 
-/* Configuração slideshow */
+/* Slideshow */
 
-.slides {
-	display: block;
-}
-
-.slide-cont {
-  width:100%;
+.prev {
+	width: 10%;
 	height: auto;
-  position: relative;
-	background-color: #fff;
-	justify-content: center;
-	display: flex;
+	top: 50%;
+	left: -10%;
+	position: absolute;
+	transform: translateY(-50%);
+	cursor: pointer;
+
 }
 
-.texto-slide {
-	background-color: #000;
-	opacity: .7;
-  color: #fff;
-  font-size: 20px;
-  padding: 8px 0px 8px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-	display: none;
+.next {
+	width: 10%;
+	height: auto;
+	top: 50%;
+	left: 100%;
+	position: absolute;
+	transform: translateY(-50%);
+	cursor: pointer;
 }
 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
-  animation-name: fade;
-  animation-duration: 2s;
+/* Fotos */
+
+.pequeno {
+	width:100px;
+	height:100px;
+	margin-right: 0.01%;
+	margin-bottom: 0.05%;
+	border: solid #000 1px;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .5}
-  to {opacity: 1}
+@media (max-width: 900px) {
+	.pequeno {
+		width:80px;
+		height:80px;
+		margin-right: 0.01%;
+	}
 }
 
-@keyframes fade {
-  from {opacity: .5}
-  to {opacity: 1}
-}
-
-.alig{
-	justify-content: center;
-	display: flex;
+@media (max-width: 660px) {
+	.pequeno {
+		width:50px;
+		height:50px;
+		margin-right: 0.01%;
+	}
 }
 
 </style>
@@ -210,20 +213,20 @@ h4 {margin-bottom: 0.2em;}
 
 <div class="menu">
 
-		<a href="hist.html" title="Passos da equipe" style="padding: 0% 5%; float: left">Histórico</a>
-		<a href="teste.html#dois" title="Organização interna" style="padding: 0% 5%; float: left">Coordenadorias</a>
-		<a href="teste.html#tres" title="Momentos da equipe" style="padding: 0% 5%; float: right">Galeria</a>
-		<a href="apoio.html" title="Quem nos apoia" style="padding: 0% 5%; float: right;">Patrocinadores</a>
+		<a href="desktop/hist.html" title="Passos da equipe" style="padding: 0% 5%; float: left">Histórico</a>
+		<a href="index.html#dois" title="Organização interna" style="padding: 0% 5%; float: left">Coordenadorias</a>
+		<a href="index.html#tres" title="Momentos da equipe" style="padding: 0% 5%; float: right">Galeria</a>
+		<a href="desktop/apoio.html" title="Quem nos apoia" style="padding: 0% 5%; float: right;">Patrocinadores</a>
 
 </div>
 
-<a href="teste.html#um" title="Quem somos">
+<a href="index.html#um" title="Quem somos">
 	<img src="imagens/logodroid.png" class="icon">
 </a>
 
 <div id="pag">
 
-	<img src="imagens/banner.png" class="banner">
+	<img src="imagens/banner_3.png" class="banner">
 	<label id="inicio">
 		<h1>Quem somos</h1>
 		A Divisão de Robótica Inteligente (DROID) foi criada em 2009 com o intuito de
@@ -232,9 +235,9 @@ h4 {margin-bottom: 0.2em;}
 		como uma das melhores equipes de robótica da América Latina.
 	</label>
 
-<span id='dois'></span>
-
 <div class="textos">
+
+<span id='dois'></span>
 
 <h1>Coordenadorias</h1>
 A Equipe DROID se organiza em coordenadorias menores para poder tomar decisões referentes a própria equipe.
@@ -267,44 +270,68 @@ distribuindo da melhor forma possível nossos recursos entre as competições qu
 <p>
 <h1>Galeria</h1>
 
-<!-- <div class="slide-cont">
-
-			<img src="imagens/equipe.JPG" style="width:20%; height: 20%">
-			<div class="texto-slide">LARC 2017</div>
-
-			<img src="imagens/equipe1.JPG" style="width:20%; height: 20%">
-			<div class="texto-slide">LARC 2017</div>
-
-			<img src="imagens/equipe2.jpg" style="width:20%; height: 20%">
-			<div class="texto-slide">Robogames 2017</div>
-
-			<img src="imagens/equipe1.JPG" style="width:20%; height: 20%">
+<div class="slides">
+	<img src="imagens/recep_1.JPG" >
+	<img src="imagens/larc2013_1.JPG" >
+	<img src="imagens/larc2015_1.JPG" >
+	<img src="imagens/larc2016_1.JPG" >
+	<img src="imagens/larc2016_2.JPG" >
+	<img src="imagens/robogames2017_1.JPG" >
+	<img src="imagens/robogames2017_2.JPG" >
+	<img src="imagens/robogames2017_3.JPG" >
+	<img src="imagens/larc2017_1.JPG" >
+	<img src="imagens/larc2017_2.JPG" >
+	<img src="imagens/larc2017_3.JPG" >
+	<img src="imagens/balancer_1.JPG" >
+	<img src="imagens/balancer_2.JPG" >
+	<img src="imagens/balancer_3.JPG" >
+	<img src="imagens/balancer_4.JPG" >
+	<img src="imagens/larc2018_1.JPG" >
+	<img src="imagens/larc2018_2.JPG" >
+	<img src="imagens/larc2018_3.JPG" >
+	<img src="imagens/larc2018_4.JPG" >
+	<img src="imagens/larc2018_5.JPG" >
+	<img src="imagens/larc2018_6.JPG" >
+	<img src="imagens/larc2018_7.JPG" >
+	<img src="imagens/ff2019_1.JPG" >
+	<img src="imagens/ff2019_2.JPG" >
+	<img src="imagens/ff2019_3.JPG" >
+	<img src="imagens/trufes2019_1.JPG" >
+	<img src="imagens/trufes2019_2.JPG" >
+	<img src="imagens/trufes2019_3.JPG" >
 
 </div>
 
-<div class="alig">
-	<img src="imagens/left.png" onclick="plusimages(1)" style="width: 8%; height: 8%; cursor: pointer">
-	<img src="imagens/equipe.JPG" style="width:10%; height: 10%; margin-top: 1.5%; margin-right: 2px">
-	<img src="imagens/equipe1.JPG" style="width:10%; height: 10%; margin-top: 1.5%; margin-right: 2px">
-	<img src="imagens/equipe2.jpg" style="width:10%; height: 10%; margin-top: 1.5%; margin-right: 2px">
-	<img src="imagens/equipe.JPG" style="width:10%; height: 10%; margin-top: 1.5%; margin-right: 2px">
-	<img src="imagens/equipe1.JPG" style="width:10%; height: 10%; margin-top: 1.5%; margin-right: 2px">
-	<img src="imagens/equipe2.jpg" style="width:10%; height: 10%; margin-top: 1.5%; margin-right: 2px">
-	<img src="imagens/equipe.JPG" style="width:10%; height: 10%; margin-top: 1.5%; margin-right: 2px">
-	<img src="imagens/equipe1.JPG" style="width:10%; height: 10%; margin-top: 1.5%; margin-right: 2px">
-	<img src="imagens/right.png" onclick="plusimages(1)" style="width: 8%; height: 8%; cursor: pointer">
-</div> -->
-
-<div class="slider-for">
-	<div>your content</div>
-	<div>your content</div>
-	<div>your content</div>
-</div>
 
 <div class="slider-nav">
-	<div>your content</div>
-	<div>your content</div>
-	<div>your content</div>
+	<img src="imagens/recep_1.JPG" class="pequeno">
+	<img src="imagens/larc2013_1.JPG" class="pequeno">
+	<img src="imagens/larc2015_1.JPG" class="pequeno">
+	<img src="imagens/larc2016_1.JPG" class="pequeno">
+	<img src="imagens/larc2016_2.JPG" class="pequeno">
+	<img src="imagens/robogames2017_1.JPG" class="pequeno">
+	<img src="imagens/robogames2017_2.JPG" class="pequeno">
+	<img src="imagens/robogames2017_3.JPG" class="pequeno">
+	<img src="imagens/larc2017_1.JPG" class="pequeno">
+	<img src="imagens/larc2017_2.JPG" class="pequeno">
+	<img src="imagens/larc2017_3.JPG" class="pequeno">
+	<img src="imagens/balancer_1.JPG" class="pequeno">
+	<img src="imagens/balancer_2.JPG" class="pequeno">
+	<img src="imagens/balancer_3.JPG" class="pequeno">
+	<img src="imagens/balancer_4.JPG" class="pequeno">
+	<img src="imagens/larc2018_1.JPG" class="pequeno">
+	<img src="imagens/larc2018_2.JPG" class="pequeno">
+	<img src="imagens/larc2018_3.JPG" class="pequeno">
+	<img src="imagens/larc2018_4.JPG" class="pequeno">
+	<img src="imagens/larc2018_5.JPG" class="pequeno">
+	<img src="imagens/larc2018_6.JPG" class="pequeno">
+	<img src="imagens/larc2018_7.JPG" class="pequeno">
+	<img src="imagens/ff2019_1.JPG" class="pequeno">
+	<img src="imagens/ff2019_2.JPG" class="pequeno">
+	<img src="imagens/ff2019_3.JPG" class="pequeno">
+	<img src="imagens/trufes2019_1.JPG" class="pequeno">
+	<img src="imagens/trufes2019_2.JPG" class="pequeno">
+	<img src="imagens/trufes2019_3.JPG" class="pequeno">
 </div>
 
 </p>
@@ -321,30 +348,45 @@ distribuindo da melhor forma possível nossos recursos entre as competições qu
 
 </div>
 
-<script type="text/javascript" src="code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
 
 <script type="text/javascript">
 
+var mobileUrl = 'mobile/inicio.html';
+
+redi_width = 1024;
+if(window.innerWidth < redi_width) {
+    window.location.replace(mobileUrl);
+}
+
+window.onresize = function() {
+    if(window.innerWidth < redi_width) {
+        window.location.replace(mobileUrl);
+    }
+};
+
 $(document).ready(function(){
 
-	$('.slider-for').slick({
-	 slidesToShow: 1,
-	 slidesToScroll: 1,
-	 arrows: true,
-	 fade: true,
-	 asNavFor: '.slider-nav'
-	});
-
-	$('.slider-nav').slick({
-	 slidesToShow: 3,
-	 slidesToScroll: 1,
-	 asNavFor: '.slider-for',
-	 dots: true,
-	 centerMode: true,
-	 focusOnSelect: true
-	});
+$('.slides').slick({
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ arrows: false,
+ fade: true,
+ asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+ slidesToShow: 3,
+ slidesToScroll: 1,
+ asNavFor: '.slides',
+ dots: true,
+ centerMode: true,
+ arrows: true,
+ variableWidth: true,
+ prevArrow:'<img class="prev" src="imagens/left.png"/>',
+ nextArrow:'<img class="next" src="imagens/right.png"/>',
+ focusOnSelect: true,
+});
 
 });
 
