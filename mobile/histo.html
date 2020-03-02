@@ -96,7 +96,7 @@ h4 {margin-bottom: 0.2em;}
 }
 
 .menu.cel {
-	background-image: url('../imagens/1.jpg');
+	background-image: url('../imagens/banner_2.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -193,7 +193,6 @@ h4 {margin-bottom: 0.2em;}
   <h1><center>Histórico</center></h1>
 
   <img src="../imagens/historico.png" style="width:100%; height:auto;">
-  <img src="../imagens/historico2.png" style="width:100%; height:auto;">
 
 	<a href="qs.html" title="Início">
 		<img class="prev" src="../imagens/left.png">
@@ -211,6 +210,20 @@ h4 {margin-bottom: 0.2em;}
 <script>
 
 function menu() {
+
+	var desktopUrl = '../desktop/index.html';
+
+	redi_width = 1024;
+	if(window.innerWidth > redi_width) {
+	    window.location.replace(desktopUrl);
+	}
+
+	window.onresize = function() {
+	    if(window.innerWidth > redi_width) {
+	        window.location.replace(desktopUrl);
+	    }
+	};
+
   var x = document.getElementById("meumenu");
 	var y = document.getElementById("meurodape");
   var z = document.getElementById("meutexto");

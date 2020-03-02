@@ -197,7 +197,6 @@ h4 {margin-bottom: 0.2em;}
 <div class="textos">
 
 <img src="../imagens/historico.png" style="width:100%; height:auto;">
-<img src="../imagens/historico2.png" style="width:100%; height:auto;">
 
  </div>
 
@@ -212,6 +211,19 @@ h4 {margin-bottom: 0.2em;}
 </div>
 
 <script type="text/javascript">
+
+var mobileUrl = '../mobile/inicio.html';
+
+redi_width = 1024;
+if(window.innerWidth < redi_width) {
+    window.location.replace(mobileUrl);
+}
+
+window.onresize = function() {
+    if(window.innerWidth < redi_width) {
+        window.location.replace(mobileUrl);
+    }
+};
 
 </script>
 

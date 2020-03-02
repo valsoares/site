@@ -31,15 +31,15 @@ src: url(../fontes/DroidSans-Bold.ttf);
 }
 
 /*negrito, italico, sublinhado, riscado e paragrafo*/
-b, strong 	{color: #A20606;}
+b, strong 	{color: #A0332C;}
 i, em 		{color: #333333;}
-u   		{color: #333333; border-bottom: 1px solid #A20606;}
+u   		{color: #333333; border-bottom: 1px solid #A0332C;}
 s, strike 	{color: #333333;}
 p {padding-top: 30px; padding-bottom: 30px}
 
 /* plano de fundo */
 body {
-	  background-color: #9F1A1A;
+	  background-color: #A0332C;
 		color:#000;
 		font-size: 16px;
 		font-family: droidsans;
@@ -93,11 +93,12 @@ h4 {margin-bottom: 0.2em;}
 /* Menu */
 
 .menu {
+
 }
 
 
 .menu.cel {
-	background-image: url('../imagens/1.jpg');
+	background-image: url('../imagens/banner_2.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -124,23 +125,20 @@ h4 {margin-bottom: 0.2em;}
 }
 
 .menu .icon {
-	/* background-image: url('../imagens/inicio.png'); */
-	background: #9F1A1A;
-	background-repeat: no-repeat;
+	background-image: url('../imagens/inicio.png');
 	background-position: center;
+	background-repeat: repeat-y;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
-	height: 100vh;
+	background-size:cover;
+	height: 100%;
 	width: 100%;
 	display: block;
 	position: absolute;
-	box-sizing: border-box;
 }
 
 .menu a.icon{
-
 }
 
 .menu.cel .icon {
@@ -188,11 +186,11 @@ h4 {margin-bottom: 0.2em;}
 
 <div id="pag">
 	<div class="menu" id="meumenu">
-			<div class="icon">
-				<img src="../imagens/logodroid.png" style="width:100%; transform: translateY(30%);">
-				<a href="javascript:void(0);" onclick="menu()">
+		<div class="icon">
+			<img src="../imagens/logodroid.png" style="width:100%; transform: translateY(30%);">
+			<a href="javascript:void(0);" onclick="menu()">
 				<img src="../imagens/seta.png" class="seta">
-				</a>
+			</a>
 		 </div>
 
 			<a href="qs.html" title="Somos a DROID" >QUEM SOMOS</a>
@@ -223,6 +221,19 @@ h4 {margin-bottom: 0.2em;}
 </body>
 
 <script>
+
+var desktopUrl = '../desktop/index.html';
+
+redi_width = 1024;
+if(window.innerWidth > redi_width) {
+    window.location.replace(desktopUrl);
+}
+
+window.onresize = function() {
+    if(window.innerWidth > redi_width) {
+        window.location.replace(desktopUrl);
+    }
+};
 
 function menu() {
   var x = document.getElementById("meumenu");

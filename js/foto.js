@@ -144,110 +144,194 @@ span.onclick = function() {
   janela12.style.display = "none";
 }
 
-// var janela13 = document.getElementById("minhajan13");
-// var img13 = document.getElementById("13");
-// var ji13 = document.getElementById("j13");
-// img13.onclick = function(){
-//   janela13.style.display = "block";
-//   ji13.src = this.src;
-// }
-// var span = document.getElementsByClassName("close")[12];
-// span.onclick = function() {
-//   janela13.style.display = "none";
-// }
-//
-// var janela14 = document.getElementById("minhajan14");
-// var img14 = document.getElementById("14");
-// var ji14 = document.getElementById("j14");
-// img14.onclick = function(){
-//   janela14.style.display = "block";
-//   ji14.src = this.src;
-// }
-// var span = document.getElementsByClassName("close")[13];
-// span.onclick = function() {
-//   janela14.style.display = "none";
-// }
-//
-// var janela15 = document.getElementById("minhajan15");
-// var img15 = document.getElementById("15");
-// var ji15 = document.getElementById("j15");
-// img15.onclick = function(){
-//   janela15.style.display = "block";
-//   ji15.src = this.src;
-// }
-// var span = document.getElementsByClassName("close")[14];
-// span.onclick = function() {
-//   janela15.style.display = "none";
-// }
-//
-// var janela16 = document.getElementById("minhajan16");
-// var img16 = document.getElementById("16");
-// var ji16 = document.getElementById("j16");
-// img16.onclick = function(){
-//   janela16.style.display = "block";
-//   ji16.src = this.src;
-// }
-// var span = document.getElementsByClassName("close")[15];
-// span.onclick = function() {
-//   janela16.style.display = "none";
-// }
-//
-// var janela17 = document.getElementById("minhajan17");
-// var img17 = document.getElementById("17");
-// var ji17 = document.getElementById("j17");
-// img17.onclick = function(){
-//   janela17.style.display = "block";
-//   ji17.src = this.src;
-// }
-// var span = document.getElementsByClassName("close")[16];
-// span.onclick = function() {
-//   janela17.style.display = "none";
-// }
-//
-// var janela18 = document.getElementById("minhajan18");
-// var img18 = document.getElementById("18");
-// var ji18 = document.getElementById("j18");
-// img18.onclick = function(){
-//   janela18.style.display = "block";
-//   ji18.src = this.src;
-// }
-// var span = document.getElementsByClassName("close")[17];
-// span.onclick = function() {
-//   janela18.style.display = "none";
-// }
-//
-// var janela19 = document.getElementById("minhajan19");
-// var img19 = document.getElementById("19");
-// var ji19 = document.getElementById("j19");
-// img19.onclick = function(){
-//   janela19.style.display = "block";
-//   ji19.src = this.src;
-// }
-// var span = document.getElementsByClassName("close")[18];
-// span.onclick = function() {
-//   janela19.style.display = "none";
-// }
-//
-// var janela20 = document.getElementById("minhajan20");
-// var img20 = document.getElementById("20");
-// var ji20 = document.getElementById("j20");
-// img20.onclick = function(){
-//   janela20.style.display = "block";
-//   ji20.src = this.src;
-// }
-// var span = document.getElementsByClassName("close")[19];
-// span.onclick = function() {
-//   janela20.style.display = "none";
-// }
-//
-// var janela21 = document.getElementById("minhajan21");
-// var img21 = document.getElementById("21");
-// var ji21 = document.getElementById("j21");
-// img21.onclick = function(){
-//   janela21.style.display = "block";
-//   ji21.src = this.src;
-// }
-// var span = document.getElementsByClassName("close")[20];
-// span.onclick = function() {
-//   janela21.style.display = "none";
-// }
+var janela13 = document.getElementById("minhajan13");
+var img13 = document.getElementById("13");
+var ji13 = document.getElementById("j13");
+img13.onclick = function(){
+  janela13.style.display = "block";
+  ji13.src = this.src;
+}
+var span = document.getElementsByClassName("close")[12];
+span.onclick = function() {
+  janela13.style.display = "none";
+}
+
+var janela14 = document.getElementById("minhajan14");
+var img14 = document.getElementById("14");
+var ji14 = document.getElementById("j14");
+img14.onclick = function(){
+  janela14.style.display = "block";
+  ji14.src = this.src;
+}
+var span = document.getElementsByClassName("close")[13];
+span.onclick = function() {
+  janela14.style.display = "none";
+}
+
+var janela15 = document.getElementById("minhajan15");
+var img15 = document.getElementById("15");
+var ji15 = document.getElementById("j15");
+img15.onclick = function(){
+  janela15.style.display = "block";
+  ji15.src = this.src;
+}
+var span = document.getElementsByClassName("close")[14];
+span.onclick = function() {
+  janela15.style.display = "none";
+}
+
+var janela16 = document.getElementById("minhajan16");
+var img16 = document.getElementById("16");
+var ji16 = document.getElementById("j16");
+img16.onclick = function(){
+  janela16.style.display = "block";
+  ji16.src = this.src;
+}
+var span = document.getElementsByClassName("close")[15];
+span.onclick = function() {
+  janela16.style.display = "none";
+}
+
+var janela17 = document.getElementById("minhajan17");
+var img17 = document.getElementById("17");
+var ji17 = document.getElementById("j17");
+img17.onclick = function(){
+  janela17.style.display = "block";
+  ji17.src = this.src;
+}
+var span = document.getElementsByClassName("close")[16];
+span.onclick = function() {
+  janela17.style.display = "none";
+}
+
+var janela18 = document.getElementById("minhajan18");
+var img18 = document.getElementById("18");
+var ji18 = document.getElementById("j18");
+img18.onclick = function(){
+  janela18.style.display = "block";
+  ji18.src = this.src;
+}
+var span = document.getElementsByClassName("close")[17];
+span.onclick = function() {
+  janela18.style.display = "none";
+}
+
+var janela19 = document.getElementById("minhajan19");
+var img19 = document.getElementById("19");
+var ji19 = document.getElementById("j19");
+img19.onclick = function(){
+  janela19.style.display = "block";
+  ji19.src = this.src;
+}
+var span = document.getElementsByClassName("close")[18];
+span.onclick = function() {
+  janela19.style.display = "none";
+}
+
+var janela20 = document.getElementById("minhajan20");
+var img20 = document.getElementById("20");
+var ji20 = document.getElementById("j20");
+img20.onclick = function(){
+  janela20.style.display = "block";
+  ji20.src = this.src;
+}
+var span = document.getElementsByClassName("close")[19];
+span.onclick = function() {
+  janela20.style.display = "none";
+}
+
+var janela21 = document.getElementById("minhajan21");
+var img21 = document.getElementById("21");
+var ji21 = document.getElementById("j21");
+img21.onclick = function(){
+  janela21.style.display = "block";
+  ji21.src = this.src;
+}
+var span = document.getElementsByClassName("close")[20];
+span.onclick = function() {
+  janela21.style.display = "none";
+}
+
+var janela22 = document.getElementById("minhajan22");
+var img22 = document.getElementById("22");
+var ji22 = document.getElementById("j22");
+img22.onclick = function(){
+  janela22.style.display = "block";
+  ji22.src = this.src;
+}
+var span = document.getElementsByClassName("close")[21];
+span.onclick = function() {
+  janela22.style.display = "none";
+}
+
+var janela23 = document.getElementById("minhajan23");
+var img23 = document.getElementById("23");
+var ji23 = document.getElementById("j23");
+img23.onclick = function(){
+  janela23.style.display = "block";
+  ji23.src = this.src;
+}
+var span = document.getElementsByClassName("close")[22];
+span.onclick = function() {
+  janela23.style.display = "none";
+}
+
+var janela24 = document.getElementById("minhajan24");
+var img24 = document.getElementById("24");
+var ji24 = document.getElementById("j24");
+img24.onclick = function(){
+  janela24.style.display = "block";
+  ji24.src = this.src;
+}
+var span = document.getElementsByClassName("close")[23];
+span.onclick = function() {
+  janela24.style.display = "none";
+}
+
+var janela25 = document.getElementById("minhajan25");
+var img25 = document.getElementById("25");
+var ji25 = document.getElementById("j25");
+img25.onclick = function(){
+  janela25.style.display = "block";
+  ji25.src = this.src;
+}
+var span = document.getElementsByClassName("close")[24];
+span.onclick = function() {
+  janela25.style.display = "none";
+}
+
+var janela26 = document.getElementById("minhajan26");
+var img26 = document.getElementById("26");
+var ji26 = document.getElementById("j26");
+img26.onclick = function(){
+  janela26.style.display = "block";
+  ji26.src = this.src;
+}
+var span = document.getElementsByClassName("close")[25];
+span.onclick = function() {
+  janela26.style.display = "none";
+}
+
+var janela27 = document.getElementById("minhajan27");
+var img27 = document.getElementById("27");
+var ji27 = document.getElementById("j27");
+img27.onclick = function(){
+  janela27.style.display = "block";
+  ji27.src = this.src;
+}
+var span = document.getElementsByClassName("close")[26];
+span.onclick = function() {
+  janela27.style.display = "none";
+}
+
+var janela28 = document.getElementById("minhajan28");
+var img28 = document.getElementById("28");
+var ji28 = document.getElementById("j28");
+img28.onclick = function(){
+  janela28.style.display = "block";
+  ji28.src = this.src;
+}
+var span = document.getElementsByClassName("close")[27];
+span.onclick = function() {
+  janela28.style.display = "none";
+}
