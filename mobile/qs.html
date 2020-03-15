@@ -88,9 +88,6 @@ p.rodape {
 
 /* Menu */
 
-.menu {
-}
-
 .menu.cel {
 	background-image: url('../imagens/banner_2.png');
 	background-repeat: no-repeat;
@@ -209,17 +206,12 @@ p.rodape {
 
 <script>
 
-var desktopUrl = '../index.html';
-
-redi_width = 1024;
-if(window.innerWidth > redi_width) {
-    window.location.replace(desktopUrl);
-}
-
 window.onresize = function() {
-    if(window.innerWidth > redi_width) {
-        window.location.replace(desktopUrl);
-    }
+	var desktopUrl = '../index.html';
+	redi_width = 1024;
+  if(window.innerWidth > redi_width) {
+      window.location.replace(desktopUrl);
+  }
 };
 
 function menu() {

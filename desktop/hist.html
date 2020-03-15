@@ -212,17 +212,12 @@ h4 {margin-bottom: 0.2em;}
 
 <script type="text/javascript">
 
-var mobileUrl = '../mobile/inicio.html';
-
-redi_width = 1024;
-if(window.innerWidth < redi_width) {
-    window.location.replace(mobileUrl);
-}
-
 window.onresize = function() {
-    if(window.innerWidth < redi_width) {
-        window.location.replace(mobileUrl);
-    }
+	var mobileUrl = '../mobile/inicio.html';
+	redi_width = 1024;
+  if(window.innerWidth < redi_width) {
+      window.location.replace(mobileUrl);
+  }
 };
 
 </script>

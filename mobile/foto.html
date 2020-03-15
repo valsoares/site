@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <!-- Créditos:
 Estruturação do site: https://www.w3schools.com/
+Mecanismo para aumento de imagens: http://fancyapps.com/fancybox/
 -->
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <head>
+
+<link rel="stylesheet" type="text/css" href="../fancybox-2.1.7/source/jquery.fancybox.css?v=2.1.5" media="screen" />
 
 <!-- ícone que fica do lado da aba onde fica o nome do site -->
 <link rel="icon" type="image/x-icon" href="../imagens/logodroid.png" />
@@ -92,10 +95,6 @@ h4 {margin-bottom: 0.2em;}
 
 /* Menu */
 
-.menu {
-
-}
-
 .menu.cel {
 	background-image: url('../imagens/banner_2.png');
 	background-repeat: no-repeat;
@@ -165,64 +164,6 @@ h4 {margin-bottom: 0.2em;}
 	margin-right: 3%;
 }
 
-.grande {
-	width:100%;
-}
-
-/* Aumento das fotos */
-
-.janela {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  padding-top: 20%;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  background-color: #fff;
-	opacity: 1;
-}
-
-.janela-img {
-  margin: auto;
-  display: block;
-  width: 100%;
-  max-width: 700px;
-	-webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #000;
-  font-size: 60px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  opacity: .7;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 
 </style>
 
@@ -253,179 +194,91 @@ h4 {margin-bottom: 0.2em;}
   <div class="textos" id="meutexto">
   <h1><center>Galeria</center></h1>
 
-  <img id="01" src="../imagens/recep_1.JPG" class="pequeno">
-  <img id="02" src="../imagens/larc2013_1.JPG" class="pequeno">
-  <img id="03" src="../imagens/larc2015_1.jpg" class="pequeno">
-  <img id="04" src="../imagens/larc2016_1.jpg" class="pequeno">
-	<img id="05" src="../imagens/larc2016_2.jpg" class="pequeno">
-	<img id="06" src="../imagens/robogames2017_1.jpg" class="pequeno">
-	<img id="07" src="../imagens/robogames2017_2.jpg" class="pequeno">
-	<img id="08" src="../imagens/robogames2017_3.jpg" class="pequeno">
-	<img id="09" src="../imagens/larc2017_1.JPG" class="pequeno">
-	<img id="10" src="../imagens/larc2017_2.JPG" class="pequeno">
-	<img id="11" src="../imagens/larc2017_3.JPG" class="pequeno">
-	<img id="12" src="../imagens/balancer_1.JPG" class="pequeno">
-	<img id="13" src="../imagens/balancer_2.JPG" class="pequeno">
-	<img id="14" src="../imagens/balancer_3.JPG" class="pequeno">
-	<img id="15" src="../imagens/balancer_4.JPG" class="pequeno">
-	<img id="16" src="../imagens/larc2018_1.JPG" class="pequeno">
-	<img id="17" src="../imagens/larc2018_2.JPG" class="pequeno">
-	<img id="18" src="../imagens/larc2018_3.JPG" class="pequeno">
-	<img id="19" src="../imagens/larc2018_4.JPG" class="pequeno">
-	<img id="20" src="../imagens/larc2018_5.JPG" class="pequeno">
-	<img id="21" src="../imagens/larc2018_6.JPG" class="pequeno">
-	<img id="22" src="../imagens/larc2018_7.JPG" class="pequeno">
-	<img id="23" src="../imagens/ff2019_1.JPG" class="pequeno">
-	<img id="24" src="../imagens/ff2019_2.JPG" class="pequeno">
-	<img id="25" src="../imagens/ff2019_3.JPG" class="pequeno">
-	<img id="26" src="../imagens/trufes2019_1.jpg" class="pequeno">
-	<img id="27" src="../imagens/trufes2019_2.jpg" class="pequeno">
-	<img id="28" src="../imagens/trufes2019_3.jpg" class="pequeno">
+	<a id="galeria" href="../imagens/recep_1.JPG">
+		<img src="../imagens/recep_1.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2013_1.JPG">
+  	<img src="../imagens/larc2013_1.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2015_1.jpg">
+  	<img src="../imagens/larc2015_1.jpg" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2016_1.jpg">
+  	<img src="../imagens/larc2016_1.jpg" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2016_2.jpg">
+		<img src="../imagens/larc2016_2.jpg" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/robogames2017_1.jpg">
+		<img src="../imagens/robogames2017_1.jpg" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/robogames2017_2.jpg">
+		<img src="../imagens/robogames2017_2.jpg" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/robogames2017_3.jpg">
+		<img src="../imagens/robogames2017_3.jpg" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2017_1.JPG">
+		<img src="../imagens/larc2017_1.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2017_2.JPG">
+		<img src="../imagens/larc2017_2.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2017_3.JPG">
+		<img src="../imagens/larc2017_3.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/balancer_1.JPG">
+		<img src="../imagens/balancer_1.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/balancer_2.JPG">
+		<img src="../imagens/balancer_2.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/balancer_3.JPG">
+		<img src="../imagens/balancer_3.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/balancer_4.JPG">
+		<img src="../imagens/balancer_4.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2018_1.JPG">
+		<img src="../imagens/larc2018_1.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2018_2.JPG">
+		<img src="../imagens/larc2018_2.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2018_3.JPG">
+		<img src="../imagens/larc2018_3.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2018_4.JPG">
+		<img src="../imagens/larc2018_4.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2018_5.JPG">
+		<img src="../imagens/larc2018_5.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2018_6.JPG">
+		<img src="../imagens/larc2018_6.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/larc2018_7.JPG">
+		<img src="../imagens/larc2018_7.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/ff2019_1.JPG">
+		<img src="../imagens/ff2019_1.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/ff2019_2.JPG">
+		<img src="../imagens/ff2019_2.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/ff2019_3.JPG">
+		<img src="../imagens/ff2019_3.JPG" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/trufes2019_1.jpg">
+		<img src="../imagens/trufes2019_1.jpg" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/trufes2019_2.jpg">
+		<img src="../imagens/trufes2019_2.jpg" class="pequeno">
+	</a>
+	<a id="galeria" href="../imagens/trufes2019_3.jpg">
+		<img src="../imagens/trufes2019_3.jpg" class="pequeno">
+	</a>
 
-	<div id="minhajan01" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j01">
-	</div>
-
-	<div id="minhajan02" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j02">
-	</div>
-
-	<div id="minhajan03" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j03">
-	</div>
-
-	<div id="minhajan04" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j04">
-	</div>
-
-	<div id="minhajan05" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j05">
-	</div>
-
-	<div id="minhajan06" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j06">
-	</div>
-
-	<div id="minhajan07" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j07">
-	</div>
-
-	<div id="minhajan08" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j08">
-	</div>
-
-	<div id="minhajan09" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j09">
-	</div>
-
-	<div id="minhajan10" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j10">
-	</div>
-
-	<div id="minhajan11" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j11">
-	</div>
-
-	<div id="minhajan12" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j12">
-	</div>
-
-	<div id="minhajan13" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j13">
-	</div>
-
-	<div id="minhajan14" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j14">
-	</div>
-
-	<div id="minhajan15" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j15">
-	</div>
-
-	<div id="minhajan16" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j16">
-	</div>
-
-	<div id="minhajan17" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j17">
-	</div>
-
-	<div id="minhajan18" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j18">
-	</div>
-
-	<div id="minhajan19" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j19">
-	</div>
-
-	<div id="minhajan20" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j20">
-	</div>
-
-	<div id="minhajan21" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j21">
-	</div>
-
-	<div id="minhajan22" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j22">
-	</div>
-
-	<div id="minhajan23" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j23">
-	</div>
-
-	<div id="minhajan24" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j24">
-	</div>
-
-	<div id="minhajan25" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j25">
-	</div>
-
-	<div id="minhajan26" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j26">
-	</div>
-
-	<div id="minhajan27" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j27">
-	</div>
-
-	<div id="minhajan28" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j28">
-	</div>
-
-	<div id="minhajan29" class="janela">
-	  <span class="close">&times;</span>
-	  <img class="janela-img" id="j29">
-	</div>
 
 	<a href="pat.html" title="Quem nos apoia">
 		<img class="prev" src="../imagens/left.png">
@@ -437,22 +290,26 @@ h4 {margin-bottom: 0.2em;}
 
 </body>
 
-<script type="text/javascript" src="../js/foto.js"></script>
+<script type="text/javascript" src="../fancybox-2.1.7/lib/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../fancybox-2.1.7/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script>
 
-var desktopUrl = '../index.html';
-
-redi_width = 1024;
-if(window.innerWidth > redi_width) {
-    window.location.replace(desktopUrl);
-}
+<script type="text/javascript">
 
 window.onresize = function() {
+	var desktopUrl = '../index.html';
+	redi_width = 1024;
     if(window.innerWidth > redi_width) {
         window.location.replace(desktopUrl);
     }
 };
+
+$(document).ready(function() {
+  $("#galeria").fancybox({
+		openEffect: 'elastic',
+    closeEffect: 'none'
+	});
+});
 
 function menu() {
   var x = document.getElementById("meumenu");

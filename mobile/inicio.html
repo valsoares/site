@@ -92,10 +92,6 @@ h4 {margin-bottom: 0.2em;}
 
 /* Menu */
 
-.menu {
-
-}
-
 
 .menu.cel {
 	background-image: url('../imagens/banner_2.png');
@@ -136,9 +132,6 @@ h4 {margin-bottom: 0.2em;}
 	width: 100%;
 	display: block;
 	position: absolute;
-}
-
-.menu a.icon{
 }
 
 .menu.cel .icon {
@@ -182,7 +175,7 @@ h4 {margin-bottom: 0.2em;}
 	width: 30%;
 	display: block;
 	position: relative;
-	transform: translate(100%, 285%);
+	transform: translate(100%, 255%);
 }
 
 </style>
@@ -227,17 +220,12 @@ h4 {margin-bottom: 0.2em;}
 
 <script>
 
-var desktopUrl = '../index.html';
-
-redi_width = 1024;
-if(window.innerWidth > redi_width) {
-    window.location.replace(desktopUrl);
-}
-
 window.onresize = function() {
-    if(window.innerWidth > redi_width) {
-        window.location.replace(desktopUrl);
-    }
+	var desktopUrl = '../index.html';
+	redi_width = 1024;
+  if(window.innerWidth > redi_width) {
+      window.location.replace(desktopUrl);
+  }
 };
 
 function menu() {
