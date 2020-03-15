@@ -353,13 +353,17 @@ distribuindo da melhor forma possível nossos recursos entre as competições qu
 
 <script type="text/javascript">
 
-window.onresize = function() {
+tela();
+
+window.addEventListener('resize', tela);
+
+function tela () {
 	var mobileUrl = 'mobile/inicio.html';
 	redi_width = 1024;
-  if(window.innerWidth < redi_width) {
-      window.location.replace(mobileUrl);
-  }
-};
+	 if(window.innerWidth < redi_width) {
+	     window.location.replace(mobileUrl);
+	 }
+}
 
 $(document).ready(function(){
 
